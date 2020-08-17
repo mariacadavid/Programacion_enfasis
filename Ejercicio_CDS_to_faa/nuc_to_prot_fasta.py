@@ -16,7 +16,7 @@ import os
 import io #tipo para un archivo "io.TextIOWrapper"
 
 #Funcion para traducir fasta CDS genomico a peptidos
-def get_polipeptides_from_genomicfasta(nucfasta: io.TextIOWrapper )-> io.TextIOWrapper:
+def get_polipeptides_from_genomicfasta(nucfasta:str )-> list:
     #Definición código genético
     gencode = {
     'ATA':'I', 'ATC':'I', 'ATT':'I', 'ATG':'M',
@@ -76,7 +76,7 @@ def get_polipeptides_from_genomicfasta(nucfasta: io.TextIOWrapper )-> io.TextIOW
    
     
 #Funcion para escribir polipeptidos en nuevo archivo fasta .faa
-def write_polipeptides_to_faa(polipeptides:list, output_filename:io.TextIOWrapper): 
+def write_polipeptides_to_faa(polipeptides:list, output_filename:str): 
     outputdata= open(output_filename,"w")
     outputdata.writelines("%s\n" % s for s in polipeptides)
     outputdata.close()
