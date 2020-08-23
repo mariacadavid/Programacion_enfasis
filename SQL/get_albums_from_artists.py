@@ -6,7 +6,7 @@ Created on Tue Aug 18 19:47:15 2020
 @author: mariacadavid
 """
 
-#Al ejecutar fuera python se deben incluir dos parametros: (1)path name de la base de datos, (2)nombre o nombre parcial del artista de interés
+#Al ejecutar python con el archivo get_albums_from.py se deben incluir dos parametros: (1)path name de la base de datos, (2)nombre o nombre parcial del artista de interés
 
 def get_arguments(args: list) -> list: 
     list_variables= []
